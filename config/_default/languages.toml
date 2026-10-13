@@ -5,8 +5,8 @@
   [en.params]
     languageISO = "EN"
     languageTag = "en-US"
-    footer = 'Brought to you by <a class="text-muted" href="https://thulite.io/">Thulite</a>'
-    alertText = '<a class="alert-link stretched-link fw-normal" href="/blog/example-post/">Doks version 1.0 just shipped!</a>'
+    footer = '© 2026 <a class="text-muted" href="/">NewRay</a> · Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a>'
+    alertText = '<a class="alert-link stretched-link fw-normal" href="/blog/ai-agent-basics/">新文章：AI Agent 核心知识速览</a>'
 
 [de]
   label = "German"

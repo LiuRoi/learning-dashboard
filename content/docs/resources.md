@@ -1,6 +1,6 @@
 ---
-title: "Resources"
-description: "Discover curated links to official docs, tools, templates, and learning materials that help you deepen your knowledge and get more from this project."
+title: "资源"
+description: "收录 Agent 与全栈开发相关的官方文档、工具、模板和学习资料，持续更新。"
 summary: ""
 date: 2024-02-27T09:30:56+01:00
 lastmod: 2024-02-27T09:30:56+01:00
@@ -15,4 +15,7 @@ params:
     robots: "" # custom robot tags (optional)
 ---
 
-Link to valuable, relevant resources.
+持续收录有价值的链接与资料。
+
+- [Hugo 文档](https://gohugo.io/documentation/)
+- [Diátaxis 文档框架](https://diataxis.fr/)

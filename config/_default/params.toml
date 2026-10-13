@@ -1,6 +1,6 @@
 # Hugo
-title = "My Docs"
-description = "Congrats on setting up a new Doks project!"
+title = "NewRay"
+description = "NewRay 的个人博客，分享 AI Agent、前端与全栈开发的知识与实践。"
 images = ["cover.png"]
 
 # mainSections
@@ -11,7 +11,7 @@ math = false # false (default) or true
 mathEngine = "KaTeX" # "KaTeX" (default) or "MathJax"
 
 [social]
-  twitter = "getdoks"
+  twitter = "newray"
 
 # Doks (@thulite/doks-core)
 [doks]
@@ -139,9 +139,9 @@ mathEngine = "KaTeX" # "KaTeX" (default) or "MathJax"
     icon = "favicon.png" # favicon.png (default)
     svgIcon = "favicon.svg" # favicon.svg (default)
   [seo.schemas]
-    type = "Organization" # Organization (default) or Person
+    type = "Person" # Organization (default) or Person
     logo = "favicon-512x512.png" # Logo of Organization — favicon-512x512.png (default)
-    name = "Thulite" # Name of Organization or Person
+    name = "NewRay" # Name of Organization or Person
     sameAs = [] # E.g. ["https://github.com/thuliteio/thulite", "https://fosstodon.org/@thulite"]
     images = ["cover.png"] # ["cover.png"] (default)
     article = [] # Article sections

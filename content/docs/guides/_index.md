@@ -1,6 +1,6 @@
 ---
-title: "Guides"
-description: "Explore step-by-step guides that walk you through common tasks, from setup to advanced workflows, helping you learn and use this project with confidence."
+title: "指南"
+description: "一步步的操作指南，覆盖从环境搭建到进阶工作流的常见任务。"
 summary: ""
 date: 2023-09-07T16:06:50+02:00
 lastmod: 2023-09-07T16:06:50+02:00

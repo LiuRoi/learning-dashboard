@@ -1,6 +1,6 @@
 ---
-title: "Reference"
-description: "Find detailed, structured reference pages that explain concepts, configuration options, and behavior so you can quickly look up precise information as you work."
+title: "参考"
+description: "概念、配置与行为的结构化参考页，方便在动手时快速查到准确信息。"
 summary: ""
 date: 2023-09-07T16:12:37+02:00
 lastmod: 2023-09-07T16:12:37+02:00
