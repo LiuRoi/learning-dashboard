@@ -12,13 +12,18 @@
 | Hugo Extended | 0.166.0+ | 必须是 **extended** 版（要编译 Sass） |
 | Dart Sass | 1.104.1+ | Hugo 的 `dartsass` 转译器需要外部 `sass` 可执行文件 |
 
-本机（Windows）PowerShell 需要把 Hugo 和 dart-sass 加进 PATH：
+本机（Windows）的 Hugo 与 dart-sass 已装好并加入用户 PATH（新开的终端自动生效）：
+
+- Hugo Extended 0.166.0：`C:\Users\Administrator\AppData\Local\Microsoft\WinGet\Packages\Hugo.Hugo.Extended_...`
+- dart-sass 1.104.1：`C:\Users\Administrator\AppData\Local\dart-sass\dart-sass`（加入用户 PATH）
+
+手动临时加 PATH（当前会话生效）：
 
 ```powershell
-$env:PATH = "$env:USERPROFILE\.local\bin\dart-sass;$env:LOCALAPPDATA\Microsoft\WinGet\Packages\Hugo.Hugo.Extended_Microsoft.Winget.Source_8wekyb3d8bbwe;$env:PATH"
+$env:PATH = "C:\Users\Administrator\AppData\Local\dart-sass\dart-sass;$env:PATH"
 ```
 
-> dart-sass 1.105+ 的可执行文件是 `sass.bat`（不再是 `sass.exe`），目录结构为 `dart-sass\sass.bat + src\dart.exe`。
+> dart-sass 1.104+ 的可执行文件是 `sass.bat`（不再是 `sass.exe`），目录结构为 `dart-sass\sass.bat + src\dart.exe`。
 
 ## 2. 常用命令
 
@@ -29,6 +34,7 @@ npm run build        # 生产构建 → public/（hugo --minify --gc）
 npm run preview      # 用 vite preview 预览 public/ 构建产物
 npm run format       # Prettier 格式化全部文件
 npm run create -- <路径>   # hugo new，如 npm run create -- content/docs/foo.md
+npm run new-post -- "文章标题" [slug]   # 新建博客文章（见 §5.3）
 ```
 
 ## 3. 目录结构
@@ -49,6 +55,9 @@ learning-dashboard/
 │       ├── _custom.scss           # 自定义样式 → import 进 app.scss 末尾
 │       └── _variables-custom.scss # 覆盖 SCSS 变量
 ├── static/             # 原样拷贝到构建输出（图片、favicon 等）
+├── archetypes/         # hugo new 的 front matter 模板（已精简为 blog / docs 两份）
+├── scripts/
+│   └── new-post.mjs    # npm run new-post 的实现（新建博客文章）
 ├── i18n/               # 翻译文件（覆盖主题的英文文案；当前不存在，需要时新建）
 ├── config/             # 站点配置（见下节）
 ├── netlify.toml        # Netlify 部署参考（钉版本：Hugo 0.166.0 / Sass 1.104.1）
@@ -99,11 +108,22 @@ slug: my-page     # 显式指定 URL 段，不填则用标题（中文会变成�
 - **URL 规则**（`hugo.toml` 的 `[permalinks] docs = "/docs/:sections[1:]/:slug/"`）：
   `content/docs/guides/my-page.md` → `/docs/guides/my-page/`
 - 侧边栏顺序：`weight` 字段；分组由 `content/docs/<section>/_index.md` 决定
-- 没有 archetypes 时 `hugo new` 会用 Hugo 内置默认 front matter，手动补 `weight`/`slug` 即可
+- 项目根目录已有 `archetypes/docs.md`（精简模板），`hugo new` 会自动生成 `title`/`slug`/`date`/`weight`，只需补 `description` 正文
 
 ### 5.3 写博客
 
-`content/blog/my-post/index.md`，front matter 同上（加 `date`），URL 规则 `/blog/:slug/`。
+一条命令建文章：
+
+```bash
+npm run new-post -- "SSE 断线重连实践" sse-reconnect   # 标题 + slug
+npm run new-post -- "SSE reconnect"                    # 纯英文标题可省略 slug
+```
+
+- 生成 `content/blog/<slug>/index.md`，front matter 现成（title/slug/date/draft/tags）
+- 中文标题没给 slug 时，slug 会退化成 `post-日期`，所以**建议总是带上英文 slug**，URL 固定为 `/blog/<slug>/`
+- `draft: true` 只在本地可见，发布前改成 `false`
+- 本地预览：`npm run dev` → `http://localhost:1313/blog/<slug>/`
+- 不想用脚本也可以：`npm run create -- content/blog/<slug>/index.md`（走 `archetypes/blog.md`）
 
 ### 5.4 自定义样式
 
@@ -133,8 +153,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 ```toml
 [[main]]
-  name = "Docs"
-  url = "/docs/guides/example-guide/"
+  name = "知识文档"
+  url = "/docs/guides/ai-agent/"
   weight = 10
 
 [[social]]

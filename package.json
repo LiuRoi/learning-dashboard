@@ -10,6 +10,7 @@
   },
   "scripts": {
     "create": "hugo new",
+    "new-post": "node scripts/new-post.mjs",
     "dev": "hugo server --disableFastRender --noHTTPCache",
     "portless": "portless run thulite-portless",
     "format": "prettier **/** -w -c",
