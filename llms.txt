@@ -1,0 +1,22 @@
+# 学习仪表盘
+
+> Agent 开发课程的学习仪表盘：10 个章节、任务清单、进度条与 localStorage 本地持久化，基于 Doks 主题构建。
+
+- [Page not found](https://liuroi.github.io/learning-dashboard/404/): The page you're looking for doesn’t exist or has moved. Check the URL, use the navigation to browse sections, or return to the homepage.
+- [章节](https://liuroi.github.io/learning-dashboard/docs/): Agent 开发课程的 10 个章节与任务清单，勾选进度与首页仪表盘实时同步。
+
+## 章节
+
+> Agent 开发课程的 10 个章节与任务清单，勾选进度与首页仪表盘实时同步。
+
+- [Agent 基础：裸写 ReAct 主循环](https://liuroi.github.io/learning-dashboard/docs/ch01-agent-basics/): Stage 1：LLM 是无状态纯函数，Agent 是一个 while 循环。手写主循环，拆开「Agent 会调工具」的黑盒。
+- [工具设计黄金法则](https://liuroi.github.io/learning-dashboard/docs/ch02-tool-design/): 工具描述就是给模型看的 API 文档：格式、示例、「缺信息先追问」都要写清；描述模糊等于主动诱导幻觉。
+- [Agent 类型与架构模式](https://liuroi.github.io/learning-dashboard/docs/ch03-agent-types/): ReAct / Plan-and-Execute / Reflection 各自的适用场景与代价，输出选型决策表。
+- [提示词工程与结构化输出](https://liuroi.github.io/learning-dashboard/docs/ch04-prompt-engineering/): System prompt 的边界感与 JSON Mode：对比自由文本解析与结构化输出的稳定性。
+- [多 Agent 协作与编排](https://liuroi.github.io/learning-dashboard/docs/ch05-multi-agent/): 任务拆分、消息传递与共享状态：两个 Agent 的接力协作与失败传递。
+- [MCP 协议与 Server 开发](https://liuroi.github.io/learning-dashboard/docs/ch06-mcp-server/): Stage 3：MCP 只是换了工具的分发协议，工具描述黄金法则原封不动地复用。
+- [上下文工程：截断 / 压缩 / 检索](https://liuroi.github.io/learning-dashboard/docs/ch07-context-engineering/): Stage 4：实验 4 的 token 膨胀曲线就是入场券——对比无脑全量、截断与摘要压缩的成本差异。
+- [RAG 检索增强生成](https://liuroi.github.io/learning-dashboard/docs/ch08-rag/): Stage 6：给 query_faq 的关键词匹配装上真正的语义检索，用坏例集验证召回。
+- [流式前端：SSE × Agent 闭环](https://liuroi.github.io/learning-dashboard/docs/ch09-streaming-frontend/): 结合前端老本行：把 agent_loop 包一层 SSE，reasoning_content 与 content 分通道逐字渲染。
+- [评估与生产化上线](https://liuroi.github.io/learning-dashboard/docs/ch10-production/): 从 demo 到可维护的服务：最小评估集、重试退避、错误上报与复盘。
+
