@@ -1,12 +1,12 @@
 {
-  "name": "learning-dashboard",
+  "name": "newray-blog",
   "version": "2.0.0",
-  "description": "Doks theme",
-  "author": "Thulite",
+  "description": "NewRay 个人博客（Hugo + Doks）",
+  "author": "NewRay",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thuliteio/doks.git"
+    "url": "https://github.com/LiuRoi/learning-dashboard.git"
   },
   "scripts": {
     "create": "hugo new",

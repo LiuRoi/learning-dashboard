@@ -1,7 +1,7 @@
 ---
-title: "Categories"
+title: "分类"
 date: 2026-02-17T13:03:14+01:00
-description: "Browse all documentation and blog categories in one place to quickly find related guides, tutorials, and reference pages on every topic we cover."
+description: "浏览本站全部分类，快速定位博客文章与知识文档中的相关主题内容。"
 draft: false
 params:
   seo:

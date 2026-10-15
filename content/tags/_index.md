@@ -1,7 +1,7 @@
 ---
-title: "Tags"
+title: "标签"
 date: 2026-02-17T13:04:01+01:00
-description: "Explore all tags used across our docs and blog posts to discover related topics, deep dives, and practical examples grouped by shared themes."
+description: "按标签聚合的全部文章与文档，方便围绕同一主题做深入阅读。"
 draft: false
 params:
   seo:
